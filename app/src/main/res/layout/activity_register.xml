@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/titulo_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="9dp"
+        android:text="Registro"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/subtitulo_registro"
+        app:layout_constraintEnd_toEndOf="@+id/nombre_registro"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="14dp"
+        android:text="Ingrese sus datos:"
+        app:layout_constraintBottom_toTopOf="@+id/nombre_registro"
+        app:layout_constraintStart_toStartOf="@+id/titulo_registro"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_registro" />
+
+    <EditText
+        android:id="@+id/nombre_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/border_style"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/telefono_registro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo_registro" />
+
+    <EditText
+        android:id="@+id/telefono_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/border_style"
+        android:ems="10"
+        android:hint="Número Celular"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ubicacion_registro"
+        app:layout_constraintStart_toStartOf="@+id/nombre_registro"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_registro" />
+
+    <EditText
+        android:id="@+id/ubicacion_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/border_style"
+        android:ems="10"
+        android:hint="Ciudad"
+        android:inputType="textPostalAddress"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/correo_registro"
+        app:layout_constraintStart_toStartOf="@+id/telefono_registro"
+        app:layout_constraintTop_toBottomOf="@+id/telefono_registro" />
+
+    <EditText
+        android:id="@+id/correo_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/border_style"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/password_registro"
+        app:layout_constraintStart_toStartOf="@+id/ubicacion_registro"
+        app:layout_constraintTop_toBottomOf="@+id/ubicacion_registro" />
+
+    <EditText
+        android:id="@+id/password_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/border_style"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Registro"
+        app:layout_constraintStart_toStartOf="@+id/correo_registro"
+        app:layout_constraintTop_toBottomOf="@+id/correo_registro" />
+
+    <Button
+        android:id="@+id/btn_Registro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="94dp"
+        android:background="@drawable/border_button"
+        android:backgroundTint="#FAF3B3"
+        android:text="Registrarse"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/black"
+        app:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_registro" />
+
+    <TextView
+        android:id="@+id/cerrar_sesion_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="496dp"
+        android:text="X"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

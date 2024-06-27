@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchPet">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="356dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="19dp"
+        android:gravity="fill"
+        android:text="Busco una mascota"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="28dp"
+        android:text="Nuevo anuncio:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="367dp"
+        android:layout_height="484dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="367dp"
+            android:layout_height="484dp"
+            android:orientation="vertical"
+            android:id="@+id/form2">
+            <EditText
+                android:id="@+id/input_tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_style"
+                android:ems="10"
+                android:inputType="text"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/black"
+                android:hint="Tipo: Perro o Gato" />
+
+            <EditText
+                android:id="@+id/input_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_style"
+                android:ems="10"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:textAlignment="center"
+                android:hint="Nombre" />
+
+            <EditText
+                android:id="@+id/input_raza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_style"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColorHint="@color/black"
+                android:hint="Raza" />
+
+            <TextView
+                android:id="@+id/txt_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sexo:"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_button1_search"
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Hembra" />
+
+                <RadioButton
+                    android:id="@+id/radio_button2_search"
+                    android:layout_width="123dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Macho" />
+
+                <RadioButton
+                    android:id="@+id/radio_button3_search"
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="No lo se" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/input_tamano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_style"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:hint="Tamaño"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:id="@+id/input_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_style"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="Agregue una descripción de la apariencia... Color, melena y otras características."/>
+
+            <EditText
+                android:id="@+id/input_collar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_style"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColorHint="@color/black"
+                android:hint="Tiene collar?Si/No" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Localización:"/>
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/mapa_search"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Fotografías:" />
+
+            <LinearLayout
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+
+                <!--<ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />-->
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_numero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_style"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColorHint="@color/black"
+                android:hint="Número a contactar" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/border_button3"
+        android:text="Publicar Caso"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/black"
+        app:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+    <TextView
+        android:id="@+id/cerrar_sesion_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="496dp"
+        android:text="X"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

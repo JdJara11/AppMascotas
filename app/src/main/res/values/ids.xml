@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvTipo" type="id" />
+    <item name="tvRaza" type="id" />
+    <item name="tvTamano" type="id" />
+    <item name="tvDescripcion" type="id" />
+    <item name="tvCollar" type="id" />
+    <item name="tvNumero" type="id" />
+</resources>
